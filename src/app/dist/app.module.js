@@ -13,6 +13,9 @@ var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var restaurant_component_1 = require("./restaurant/restaurant.component");
 var restaurant_list_component_1 = require("./restaurant-list/restaurant-list.component");
+var page_not_found_component_1 = require("./page-not-found/page-not-found.component");
+var home_component_1 = require("./home/home.component");
+var shared_module_1 = require("./shared/shared.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -21,11 +24,14 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 restaurant_component_1.RestaurantComponent,
-                restaurant_list_component_1.RestaurantListComponent
+                restaurant_list_component_1.RestaurantListComponent,
+                page_not_found_component_1.PageNotFoundComponent,
+                home_component_1.HomeComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                shared_module_1.SharedModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
