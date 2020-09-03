@@ -36,6 +36,10 @@ export let dummyRestaurants = [
           price: 45.99
         }
       ]
+    },
+    address: {
+      street: 'Total BP Cite',
+      city: 'Douala',
     }
   }
 ];
