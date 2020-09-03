@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { RestaurantService } from './../../core/restaurant.service';
 
 @Component({
   selector: 'fapp-restaurant-detail',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantDetailComponent implements OnInit {
 
-  constructor() { }
+  public restaurant: any;
+  constructor(private restaurantService: RestaurantService,
+              private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+    this.getRestaurant();
   }
+
+  getRestaurant() {
+    let slug = this.activatedRoute.snapshot.paramMap.get("id");
+    this.restaurant = this.restaurantService.getRestaurant(slug);
+  }
+
 
 }

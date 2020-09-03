@@ -1,5 +1,4 @@
 import { RestaurantService } from './../../core/restaurant.service';
-import { dummyRestaurants } from './../restaurant';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
