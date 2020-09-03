@@ -1,5 +1,5 @@
+import { dummyRestaurants } from './../restaurant';
 import { Component, OnInit } from '@angular/core';
-
 
 @Component({
   selector: 'fapp-restaurant-list',
@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantListComponent implements OnInit {
 
+  public restaurants: any[] = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.restaurants = dummyRestaurants;
+    console.log(this.restaurants)
   }
 
 }
