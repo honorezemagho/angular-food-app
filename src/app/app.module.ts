@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 import { SharedModule } from './shared/shared.module';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail/restaurant-detail.component';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { RestaurantDetailComponent } from './restaurant/restaurant-detail/restau
     RestaurantListComponent,
     PageNotFoundComponent,
     HomeComponent,
-    RestaurantDetailComponent
+    RestaurantDetailComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

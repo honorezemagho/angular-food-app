@@ -7,8 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
- constructor() {
+  title: string;
+  lead: string;
+  searchResult: boolean;
 
+ constructor() {
+  this.title = 'Food App';
+  this.lead = 'Ordering Food, has never been easier';
+  this.searchResult = false;
  }
+
+ search(event) {
+   event.preventDefault();
+   this.searchResult = true;
+}
 
 }

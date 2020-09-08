@@ -18,7 +18,7 @@ export class RestaurantDetailComponent implements OnInit {
   }
 
   getRestaurant() {
-    let slug = this.activatedRoute.snapshot.paramMap.get("id");
+    const slug = this.activatedRoute.snapshot.paramMap.get('id');
     this.restaurant = this.restaurantService.getRestaurant(slug);
   }
 
