@@ -15,6 +15,7 @@ export class RestaurantDetailComponent implements OnInit {
 
   ngOnInit() {
     this.getRestaurant();
+    console.log('I am coming');
   }
 
   getRestaurant() {
@@ -22,5 +23,8 @@ export class RestaurantDetailComponent implements OnInit {
     this.restaurant = this.restaurantService.getRestaurant(slug);
   }
 
+  ngOnDestroy(){
+    console.log('I am leaving')
+  }
 
 }
