@@ -9,7 +9,17 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  loginForm = {
+    email: '',
+    password : ''
+  };
+
   ngOnInit() {
+  }
+
+  onClickSubmit(data){
+    console.log(data);
+    alert('Entered Email id :' + data.emailid);
   }
 
 }
