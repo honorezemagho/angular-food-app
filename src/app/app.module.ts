@@ -1,7 +1,7 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,7 @@ import { SharedModule } from './shared/shared.module';
 import { RestaurantDetailComponent } from './restaurant/restaurant-detail/restaurant-detail.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     RestaurantDetailComponent,
     SearchResultComponent,
-    LoginComponent
-  ],
+    LoginComponent,
+      SignUpComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

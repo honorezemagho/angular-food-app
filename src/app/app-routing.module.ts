@@ -1,3 +1,4 @@
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
     data: { title: 'Sample Title Passed' }
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path: 'register', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
   { path: '**', component: PageNotFoundComponent}
  ];
