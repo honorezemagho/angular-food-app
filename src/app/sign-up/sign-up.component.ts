@@ -3,7 +3,7 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-sign-up',
+  selector: 'fapp-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
@@ -18,19 +18,19 @@ formdata;
 
 ngOnInit(): void {
   this.formdata = new FormGroup ({
-    emailid: new FormControl("", Validators.compose ([
+    emailid: new FormControl('', Validators.compose ([
       Validators.required,
-      Validators.pattern("^ @]*@[^ @]*")
+      Validators.pattern('^ @]*@[^ @]*')
     ])),
-    passwd: new FormControl("", this.passwordvalidation)
+    passwd: new FormControl('', this.passwordvalidation)
   });
 }
 passwordvalidation(formcontrol) {
   if (formcontrol.value.length < 5) {
-    return {"passwd" : true};
+    return {passwd : true};
   }
 }
-onClickSubmit(data) {this.emailid = data.emailid;}
+onClickSubmit(data) {this.emailid = data.emailid; }
 
 
 }
